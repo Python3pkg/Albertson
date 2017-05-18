@@ -206,7 +206,7 @@ class Counter(object):
 
     @property
     def count(self):
-        print(self.dynamo_item)
+        print self.dynamo_item
         return self.dynamo_item['count']
 
     @property

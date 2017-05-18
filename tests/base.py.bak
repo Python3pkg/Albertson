@@ -372,8 +372,8 @@ class BaseCounterPoolTests(DynamoDeleteMixin, unittest.TestCase):
         pool = self.get_pool()
         item = self.get_item()
         counter = pool.get_counter(item.hash_key)
-        print(item)
-        print(counter.dynamo_item)
+        print item
+        print counter.dynamo_item
 
         self.assertEqual(item, counter.dynamo_item)
         old_count = counter.count
@@ -397,8 +397,8 @@ class BaseCounterPoolTests(DynamoDeleteMixin, unittest.TestCase):
         pool = self.get_pool()
         item = self.get_item()
         counter = pool.get_counter(item.hash_key, start=1)
-        print(item)
-        print(counter.dynamo_item)
+        print item
+        print counter.dynamo_item
 
         self.assertEqual(item, counter.dynamo_item)
         old_count = counter.count
